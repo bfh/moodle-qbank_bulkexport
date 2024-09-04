@@ -23,5 +23,5 @@
  */
 
 
-$string['pluginname'] = 'Bulk XML Export';
+$string['pluginname'] = 'Bulk XML Export questions';
 $string['privacy:metadata'] = 'The XML export question bank plugin does not store any personal data.';
