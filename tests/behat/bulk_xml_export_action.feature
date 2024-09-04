@@ -20,6 +20,22 @@ Feature: Use the plugin to export several question at once in the qbank manager.
       | Test Q1          | truefalse | First question | Answer the first question     |
       | Sub Q1.2         | essay     | Essay Foo Bar  | Write about whatever you want |
 
+  Scenario: Enable/disable bulk export xml questions bulk action from the base view
+    Given I log in as "admin"
+    When I navigate to "Plugins > Question bank plugins > Manage question bank plugins" in site administration
+    And I should see "Bulk XML Export"
+    And I click on "Disable" "link" in the "Bulk move questions" "table_row"
+    And I am on the "Test quiz" "mod_quiz > question bank" page
+    And I click on "First question" "checkbox"
+    And I click on "With selected" "button"
+    Then I should not see question bulk action "Export as Moodle XML"
+    And I navigate to "Plugins > Question bank plugins > Manage question bank plugins" in site administration
+    And I click on "Enable" "link" in the "Bulk XML Export" "table_row"
+    And I am on the "Test quiz" "mod_quiz > question bank" page
+    And I click on "First question" "checkbox"
+    And I click on "With selected" "button"
+    And I should see question bulk action "Export as Moodle XML"
+
   @javascript
   Scenario: Export questions as Moodle XML
     When I am on the "Course 1" "core_question > course question bank" page logged in as "teacher1"
