@@ -18,6 +18,7 @@
  * Version information for qbank_bulkxmlexport.
  *
  * @package    qbank_bulkxmlexport
+ * @copyright  2024 Stephan Robotta
  * @author     2024 Stephan Robotta
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

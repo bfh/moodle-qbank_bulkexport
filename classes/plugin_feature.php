@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-
 namespace qbank_bulkxmlexport;
 use core_question\local\bank\plugin_features_base;
 
@@ -27,6 +26,11 @@ use core_question\local\bank\plugin_features_base;
  */
 class plugin_feature extends plugin_features_base {
 
+    /**
+     * This method will return the array objects for the bulk actions ui.
+     *
+     * @return bulk_action_base[]
+     */
     public function get_bulk_actions(): array {
         return [
             new xmlexport(),

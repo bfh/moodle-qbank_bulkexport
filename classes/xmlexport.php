@@ -25,21 +25,49 @@ namespace qbank_bulkxmlexport;
  */
 class xmlexport extends \core_question\local\bank\bulk_action_base {
 
+    /**
+     * The key for the action.
+     */
     public const KEY = 'bulkxmlexport';
+
+    /**
+     * The URL for the action.
+     */
     public const URL = '/question/bank/bulkxmlexport/export.php';
 
+    /**
+     * Return the string to show in the list.
+     *
+     * @return string
+     * @throws \coding_exception
+     */
     public function get_bulk_action_title(): string {
         return get_string('exportasxml', 'question');
     }
 
+    /**
+     * Return the key for the action.
+     *
+     * @return string
+     */
     public function get_key(): string {
         return self::KEY;
     }
 
+    /**
+     * Return the URL of the bulk action redirect page.
+     *
+     * @return \moodle_url
+     */
     public function get_bulk_action_url(): \moodle_url {
         return new \moodle_url(self::URL);
     }
 
+    /**
+     * Get the capabilities for the bulk action.
+     *
+     * @return string[]|null
+     */
     public function get_bulk_action_capabilities(): ?array {
         return [
             'moodle/question:viewall',
