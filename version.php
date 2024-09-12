@@ -19,13 +19,14 @@
  *
  * @package    qbank_bulkxmlexport
  * @copyright  2024 Stephan Robotta
- * @author     2024 Stephan Robotta
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'qbank_bulkxmlexport';
-$plugin->version   = 2024090400;
-$plugin->requires  = 2021052500;
-$plugin->maturity  = MATURITY_RC;
+$plugin->release = '0.2';
+$plugin->version = 2024091200;
+$plugin->requires = 2024041200;
+$plugin->supported = [404, 404];
+$plugin->maturity = MATURITY_RC;
