@@ -2,29 +2,27 @@
 Feature: Use the plugin to export several question at once in the qbank manager.
 
   Background:
-    Given the following "courses" exist:
+    Given the following "users" exist:
+      | username | firstname | lastname | email                |
+      | teacher1 | Teacher   | 1        | teacher1@example.com |
+    And the following "courses" exist:
       | fullname | shortname | category |
       | Course 1 | C1        | 0        |
     And the following "activities" exist:
-      | activity | name      | course | idnumber |
-      | quiz     | Test quiz | C1     | quiz1    |
+      | activity   | name      | course | idnumber |
+      | quiz       | Test quiz | C1     | quiz1    |
+    And the following "course enrolments" exist:
+      | user     | course | role           |
+      | teacher1 | C1     | editingteacher |
     And the following "question categories" exist:
       | contextlevel | reference | questioncategory | name           |
       | Course       | C1        | Top              | top            |
       | Course       | C1        | top              | Default for C1 |
       | Course       | C1        | Default for C1   | Subcategory    |
-      | Course       | C1        | Test questions   | testquestions  |
     And the following "questions" exist:
       | questioncategory | qtype     | name           | questiontext                  |
-      | Test questions   | truefalse | First question | Answer the first question     |
       | Default for C1   | truefalse | First question | Answer the first question     |
       | Subcategory      | essay     | Essay Foo Bar  | Write about whatever you want |
-    And the following "users" exist:
-      | username | firstname | lastname | email                |
-      | teacher1 | Teacher   | 1        | teacher1@example.com |
-    And the following "course enrolments" exist:
-      | user     | course | role           |
-      | teacher1 | C1     | editingteacher |
 
   Scenario: Enable/disable bulk export xml questions bulk action from the base view
     Given I log in as "admin"
