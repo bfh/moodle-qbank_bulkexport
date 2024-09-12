@@ -9,6 +9,8 @@ moodle-qbank_bulkxmlexport
 
 Moodle question bank plugin to selectively download questions as Moodle XML.
 
+This project was created as MoodleMoot DACH 2024.
+
 
 Requirements
 ------------
@@ -19,7 +21,8 @@ This plugin requires Moodle 4.4.
 Motivation for this report
 --------------------------
 
-Quiz question export as XML does only work category wise or question wise. This plugin adds a bulk action.
+Quiz question export as XML does only work category wise or question wise. This plugin adds a bulk action
+in the question bank.
 
 
 Installation
