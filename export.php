@@ -53,10 +53,10 @@ $contexts = new core_question\local\bank\question_edit_contexts($thiscontext);
 
 $questionlist = [];
 
-// There is not request class to actually get the posted params. The checked checboxed
-// have a name like q<ID> where <ID> is the question id.
-if (is_array($_REQUEST)) {
-    foreach (array_keys($_REQUEST) as $key) {
+// The checked checkboxes have a name like q<ID> where <ID> is the question id.
+$request = data_submitted();
+if ($request) {
+    foreach (array_keys(get_object_vars($request)) as $key) {
         if (strpos($key, 'q') === 0) {
             $questionid = substr($key, 1);
             if (is_number($questionid)) {
