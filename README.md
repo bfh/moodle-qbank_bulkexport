@@ -33,6 +33,10 @@ See http://docs.moodle.org/en/Installing_plugins for details on installing Moodl
 
 ## Version History
 
+### 0.3
+
+- Fix missing include.
+
 ### 0.2
 
 - Added ci of Moodle 4.4.
