@@ -33,6 +33,10 @@ See http://docs.moodle.org/en/Installing_plugins for details on installing Moodl
 
 ## Version History
 
+### 0.4
+
+- Add Moodle 4.5 to the CI pipeline.
+
 ### 0.3
 
 - Fix missing include.
