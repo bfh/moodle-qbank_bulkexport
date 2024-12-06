@@ -16,6 +16,7 @@
 
 namespace qbank_bulkxmlexport;
 use core_question\local\bank\plugin_features_base;
+use core_question\local\bank\view;
 
 /**
  * Class plugin_feature is the entrypoint for the features.
@@ -31,9 +32,9 @@ class plugin_feature extends plugin_features_base {
      *
      * @return bulk_action_base[]
      */
-    public function get_bulk_actions(): array {
+    public function get_bulk_actions(view $view): array {
         return [
-            new xmlexport(),
+            new xmlexport($view),
         ];
     }
 }
